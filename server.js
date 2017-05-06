@@ -13,9 +13,12 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({
 	type: "application/vnd.api+json"
 }));
+//Allows page access to external css files
 app.use(express.static(path.join(__dirname, '/app/public/css/')));
+//Html routes
 app.use(require('./app/routing/htmlRoutes.js'));
-// app.use(require('./app/routing/apiRoutes.js'));
+//API routes
+app.use(require('./app/routing/apiRoutes.js'));
 
 app.listen(port, function(){
 	console.log('listening on port' + port);

@@ -1,14 +1,14 @@
 var express = require('express');
-var router = express.Router();
+var htmlRouter = express.Router();
 var bodyParser = require('body-parser');
 var path = require('path');
 
-router.get('/', function(req, res){
+htmlRouter.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, '/../public/home.html'));
 });
 
-router.get("/survey", function(req, res){
+htmlRouter.get("/survey", function(req, res){
 	res.sendFile(path.join(__dirname, '/../public/survey.html'));
 });;
 
-module.exports = router;
+module.exports = htmlRouter;
