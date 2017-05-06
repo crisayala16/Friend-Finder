@@ -19,16 +19,16 @@ var data = [
 	name: "Albert Einstien",
 	photo: "https://static.comicvine.com/uploads/scale_small/0/77/4359914-7-einstein-digital-art-digital-art-by-mark-fredrickson.jpg",
 	scores: [
-		1,
+		5,
 		2,
+		5,
+		1,
+		5,
+		1,
 		3,
 		1,
 		5,
-		5,
-		5,
-		3,
-		1,
-		2
+		5
 	]
 },
 {

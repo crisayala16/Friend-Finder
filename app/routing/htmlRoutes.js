@@ -3,9 +3,7 @@ var htmlRouter = express.Router();
 var bodyParser = require('body-parser');
 var path = require('path');
 
-htmlRouter.get('/', function(req, res){
-	res.sendFile(path.join(__dirname, '/../public/home.html'));
-});
+htmlRouter.use(express.static(path.join(__dirname, '/../public/')));
 
 htmlRouter.get("/survey", function(req, res){
 	res.sendFile(path.join(__dirname, '/../public/survey.html'));

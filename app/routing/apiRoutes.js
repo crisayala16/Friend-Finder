@@ -50,6 +50,8 @@ apiRouter.post('/api/friends', function(req, res){
 			match = data[y];
 			//sends the match to the client
 			res.send(match);
+			data.push(newFriend);
+
 		}
 	}
 
