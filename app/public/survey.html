@@ -140,7 +140,12 @@
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+	var validated = true;
 		$('#sub-btn').on('click', function(){
+			if($('#name').val().trim() === "" || $('#img-link').val().trim() === ""){
+				alert("Please Fill out all required input fields.");
+			}
+			else if(validated){
 			var scoreArr = [];
 			//creates the score array 
 			for(var i = 1; i < 11; i++){
@@ -162,6 +167,7 @@
 					$('#match-name').text(bestMatch.name);
 					$('#match-img').attr('src', bestMatch.photo);
 			});
+		}
 
 		})
 
