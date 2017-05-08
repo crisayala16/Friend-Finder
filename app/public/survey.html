@@ -144,6 +144,7 @@
 		$('#sub-btn').on('click', function(){
 			if($('#name').val().trim() === "" || $('#img-link').val().trim() === ""){
 				alert("Please Fill out all required input fields.");
+				$('#myModal').modal('hide');
 			}
 			else if(validated){
 			var scoreArr = [];
